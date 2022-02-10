@@ -6,7 +6,7 @@ import java.util.List;
 
 public class BoardGame {
 
-    private String nameOfGame;
+    private String titleOfGame;
     private int minimumPlayers;
     private int maximumPlayers;
     private int estimatedPlayingTime;
@@ -22,8 +22,8 @@ public class BoardGame {
     /*
         ***************CONSTRUCTOR****************
     */
-    public BoardGame (String nameOfGame) {
-        this.nameOfGame = nameOfGame;
+    public BoardGame (String titleOfGame) {
+        this.titleOfGame = titleOfGame;
     }
 
     /*
@@ -62,11 +62,11 @@ public class BoardGame {
     }
 
     public String getNameOfGame() {
-        return nameOfGame;
+        return titleOfGame;
     }
 
     public void setNameOfGame(String nameOfGame) {
-        this.nameOfGame = nameOfGame;
+        this.titleOfGame = nameOfGame;
     }
 
     public int getMinimumPlayers() {
