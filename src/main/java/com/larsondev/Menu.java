@@ -12,5 +12,10 @@ public class Menu {
         System.out.println("********************************");
     }
 
-
+    public int askNumberOfPlayers() {
+        System.out.println("How many players are playing?");
+        String totalNumberOfPlayers = userInput.nextLine();
+        int numberOfPlayersToInt = Integer.parseInt(totalNumberOfPlayers);
+        return numberOfPlayersToInt;
+    }
 }
