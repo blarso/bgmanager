@@ -1,6 +1,5 @@
 package com.larsondev;
 
-import java.sql.SQLOutput;
 import java.util.Map;
 import java.util.Scanner;
 
