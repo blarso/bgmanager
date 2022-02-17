@@ -1,20 +1,20 @@
 package com.larsondev;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.io.FileNotFoundException;
 import java.util.Map;
 
 public class Manager {
 
-    public static void main(String[] args) {
+    private Map<String, BoardGame> library;
 
-//        Map<BoardGame, String> library = new HashMap<BoardGame, String>();
-//        library.put(new BoardGame("7 Wonders Duel"), "7 Wonders Duel");
+    public void run() throws FileNotFoundException {
+
+        LibraryFileReader libraryBuilder = new LibraryFileReader();
+        this.library = libraryBuilder.getStartingLibrary();
+
     }
 
-    public void run() {
-
-
+    public Map<String, BoardGame> getLibrary() {
+        return library;
     }
 }

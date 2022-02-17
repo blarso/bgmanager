@@ -6,42 +6,67 @@ import java.util.List;
 
 public class BoardGame {
 
+    private String gameID;
     private String titleOfGame;
     private int minimumPlayers;
     private int maximumPlayers;
     private int estimatedPlayingTime;
-    private int recommendedAge;
+    //private int recommendedAge;
     private double bggWeight;
     private double bggRating;
     private String description;
     private int numberOfTimesPlayed = 0;
     private LocalDate lastTimePlayed;
-    private List<String> publishers = new ArrayList<String>();
-    private List<String> designers = new ArrayList<String>();
-    private List<String> categories = new ArrayList<String>();
+    //private List<String> publishers = new ArrayList<String>();
+    //private List<String> designers = new ArrayList<String>();
+    private ArrayList<String> categories = new ArrayList<String>();
     /*
         ***************CONSTRUCTOR****************
     */
+
     public BoardGame (String titleOfGame) {
         this.titleOfGame = titleOfGame;
+    }
+
+    public BoardGame (String gameID, String titleOfGame, int minimumPlayers, int maximumPlayers,
+                      int estimatedPlayingTime, double bggWeight, double bggRating,
+                      String description, ArrayList<String> categories) {
+        this.gameID = gameID;
+        this.titleOfGame = titleOfGame;
+        this.minimumPlayers = minimumPlayers;
+        this.maximumPlayers = maximumPlayers;
+        this.estimatedPlayingTime = estimatedPlayingTime;
+        this.bggWeight = bggWeight;
+        this.bggRating = bggRating;
+        this.description = description;
+        this.categories = categories;
     }
 
     /*
         *********GETTERS AND SETTERS**********
      */
+
+    public String getGameID() {
+        return gameID;
+    }
+
+    public String getTitleOfGame() {
+        return titleOfGame;
+    }
+
     public int getNumberOfTimesPlayed() {
         return numberOfTimesPlayed;
     }
 
-    public void setPublishers(List<String> publishers) {
-        this.publishers = publishers;
-    }
+//    public void setPublishers(List<String> publishers) {
+//        this.publishers = publishers;
+//    }
+//
+//    public void setDesigners(List<String> designers) {
+//        this.designers = designers;
+//    }
 
-    public void setDesigners(List<String> designers) {
-        this.designers = designers;
-    }
-
-    public void setCategories(List<String> categories) {
+    public void setCategories(ArrayList<String> categories) {
         this.categories = categories;
     }
 
@@ -49,13 +74,13 @@ public class BoardGame {
         return lastTimePlayed;
     }
 
-    public List<String> getPublishers() {
-        return publishers;
-    }
-
-    public List<String> getDesigners() {
-        return designers;
-    }
+//    public List<String> getPublishers() {
+//        return publishers;
+//    }
+//
+//    public List<String> getDesigners() {
+//        return designers;
+//    }
 
     public List<String> getCategories() {
         return categories;
@@ -93,13 +118,13 @@ public class BoardGame {
         this.estimatedPlayingTime = estimatedPlayingTime;
     }
 
-    public int getRecommendedAge() {
-        return recommendedAge;
-    }
-
-    public void setRecommendedAge(int recommendedAge) {
-        this.recommendedAge = recommendedAge;
-    }
+//    public int getRecommendedAge() {
+//        return recommendedAge;
+//    }
+//
+//    public void setRecommendedAge(int recommendedAge) {
+//        this.recommendedAge = recommendedAge;
+//    }
 
     public double getBggWeight() {
         return bggWeight;
@@ -131,4 +156,5 @@ public class BoardGame {
         this.lastTimePlayed = LocalDate.now();
         this.numberOfTimesPlayed++;
     }
+
 }
