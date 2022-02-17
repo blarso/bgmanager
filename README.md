@@ -1,10 +1,18 @@
 # bgmanager
+bgmanager
+
+Description: bgmanager is a command-line application tasked with organizing, facilitating basic search, and recording play
+             of a library of board games. It uses File I/O to import the library, implements OOP fundamentals, and is built
+             in Java.
 
 Tasks:
-    1. Create .csv 
-    2. Work on menu
-    3. Use genres for search function
-    4. Add ability to "play" game and record statistics
-    5. Wishlist
-    6. BGG API connection
-    7. Recommend similar games
+    - Use genres for search function
+    - Add ability to "play" game and record statistics
+    - Wishlist
+    - BGG API connection
+    - Recommend similar games
+
+Tasks Completed:
+    - Create .csv
+    - Build menu
+    - Use players and time for search
